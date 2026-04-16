@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Know You for macOS</title>
+  <meta name="description" content="Know You turns your daily computer context into a story-first journal on macOS.">
+  <meta property="og:title" content="Know You for macOS">
+  <meta property="og:description" content="Local-first journaling from your daily computer context.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gift-is-coding.github.io/know-you-downloads/">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --bg: #f7f1e8;
+      --surface: rgba(255, 252, 246, 0.82);
+      --ink: #171411;
+      --muted: #625a50;
+      --line: rgba(23, 20, 17, 0.12);
+      --accent: #0d8a72;
+      --accent-2: #e76f51;
+      --shadow: 0 20px 60px rgba(23, 20, 17, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(231, 111, 81, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(13, 138, 114, 0.18), transparent 24%),
+        linear-gradient(180deg, #fbf6ef 0%, #f4ede3 100%);
+      font-family: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 72px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.52);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      margin-top: 22px;
+      align-items: stretch;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--surface);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 34px;
+    }
+
+    h1 {
+      margin: 18px 0 16px;
+      font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+      font-size: clamp(42px, 7vw, 84px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+    }
+
+    .sub {
+      max-width: 42rem;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(23, 20, 17, 0.12);
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--accent) 0%, #0b6c5a 100%);
+    }
+
+    .btn-secondary {
+      color: var(--ink);
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .hero-side {
+      padding: 24px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .metric {
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.64);
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .metric-value {
+      margin-top: 8px;
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .metric code,
+    .install code {
+      font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+      font-size: 0.95em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .feature {
+      padding: 22px;
+    }
+
+    .feature h2,
+    .install h2 {
+      margin: 0 0 10px;
+      font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+      font-size: 20px;
+    }
+
+    .feature p,
+    .install p,
+    .install li {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .install {
+      margin-top: 20px;
+      padding: 30px;
+    }
+
+    .notice {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(231, 111, 81, 0.12);
+      border: 1px solid rgba(231, 111, 81, 0.22);
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-side,
+      .install {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: clamp(34px, 12vw, 58px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">Know You · macOS · Local-first journaling</div>
+
+    <section class="hero">
+      <div class="card hero-copy">
+        <h1>Turn your day on the computer into a readable story.</h1>
+        <p class="sub">
+          Know You captures your daily computer context on macOS, filters sensitive data before persistence,
+          and turns the day into a story-first journal you can actually read instead of a pile of raw logs.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.0.0-build109/KnowYou-macOS-v1.0-build1-3c05f40.zip">Download for macOS</a>
+          <a class="btn btn-secondary" href="https://github.com/gift-is-coding/know-you-downloads/releases/tag/v1.0.0-build109">Release notes</a>
+        </div>
+      </div>
+
+      <div class="card hero-side">
+        <div class="metric">
+          <div class="metric-label">Version</div>
+          <div class="metric-value">1.0 (109)</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Commit</div>
+          <div class="metric-value"><code>3c05f40</code></div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Artifact</div>
+          <div class="metric-value">6.1 MB zip</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">SHA-256</div>
+          <div class="metric-value"><code>76720050f283a1103e0e2a73aefe42845cc8a83cbb4f68bdd33563dc79098998</code></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card feature">
+        <h2>Local-first by default</h2>
+        <p>Clipboard and notification context stays on your Mac, with privacy filtering applied before data is written to disk.</p>
+      </article>
+      <article class="card feature">
+        <h2>Story-first reading</h2>
+        <p>You read the day as a narrative first, then drill down into paragraph-level source evidence when you want context.</p>
+      </article>
+      <article class="card feature">
+        <h2>Works even without cloud AI</h2>
+        <p>Fallback story generation keeps the daily journal usable when no external summarizer is configured.</p>
+      </article>
+    </section>
+
+    <section class="card install">
+      <h2>Install</h2>
+      <ol>
+        <li>Download the zip file.</li>
+        <li>Unzip it and move <code>KnowYou.app</code> into <code>/Applications</code>.</li>
+        <li>Launch the app and complete the macOS permission flow for clipboard and notifications.</li>
+      </ol>
+      <div class="notice">
+        This build is signed but not notarized with a Developer ID certificate yet. On first launch, macOS may warn that the app cannot be verified. If it does, right-click the app, choose <strong>Open</strong>, and confirm the prompt in System Settings.
+      </div>
+      <p class="footer">
+        Download repo: <a href="https://github.com/gift-is-coding/know-you-downloads">gift-is-coding/know-you-downloads</a>
+      </p>
+    </section>
+  </div>
+</body>
+</html>
