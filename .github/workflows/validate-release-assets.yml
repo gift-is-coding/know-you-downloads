@@ -1,0 +1,86 @@
+name: Validate Release Assets
+
+on:
+  release:
+    types:
+      - published
+      - edited
+      - released
+      - prereleased
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to validate. Defaults to latest release when omitted.
+        required: false
+        type: string
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Validate release asset shape
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            async function loadRelease() {
+              const manualTag = core.getInput('tag');
+              if (manualTag) {
+                const { data } = await github.rest.repos.getReleaseByTag({
+                  owner,
+                  repo,
+                  tag: manualTag,
+                });
+                return data;
+              }
+
+              if (context.eventName === 'release' && context.payload.release) {
+                return context.payload.release;
+              }
+
+              const { data } = await github.rest.repos.getLatestRelease({ owner, repo });
+              return data;
+            }
+
+            const release = await loadRelease();
+            const assets = release.assets || [];
+            const zipAssets = assets.filter((asset) =>
+              asset.name.endsWith('.zip') && !asset.name.endsWith('.zip.sha256')
+            );
+            const checksumAssets = assets.filter((asset) => asset.name.endsWith('.zip.sha256'));
+
+            core.info(`Validating release ${release.tag_name}`);
+            core.info(`Assets: ${assets.map((asset) => asset.name).join(', ') || '(none)'}`);
+
+            if (zipAssets.length !== 1) {
+              core.setFailed(
+                `Expected exactly 1 primary .zip asset, found ${zipAssets.length}: ${zipAssets
+                  .map((asset) => asset.name)
+                  .join(', ')}`
+              );
+              return;
+            }
+
+            if (checksumAssets.length !== 1) {
+              core.setFailed(
+                `Expected exactly 1 .zip.sha256 checksum asset, found ${checksumAssets.length}: ${checksumAssets
+                  .map((asset) => asset.name)
+                  .join(', ')}`
+              );
+              return;
+            }
+
+            const zipBaseName = zipAssets[0].name;
+            const expectedChecksumName = `${zipBaseName}.sha256`;
+            if (checksumAssets[0].name !== expectedChecksumName) {
+              core.setFailed(
+                `Checksum asset must match the primary zip. Expected ${expectedChecksumName}, found ${checksumAssets[0].name}.`
+              );
+              return;
+            }
+
+            core.notice(`Release ${release.tag_name} passed: ${zipBaseName}`);
