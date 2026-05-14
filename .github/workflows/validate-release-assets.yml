@@ -48,17 +48,18 @@ jobs:
 
             const release = await loadRelease();
             const assets = release.assets || [];
-            const zipAssets = assets.filter((asset) =>
-              asset.name.endsWith('.zip') && !asset.name.endsWith('.zip.sha256')
+            const primaryAssets = assets.filter((asset) =>
+              (asset.name.endsWith('.dmg') || asset.name.endsWith('.zip')) &&
+              !asset.name.endsWith('.sha256')
             );
-            const checksumAssets = assets.filter((asset) => asset.name.endsWith('.zip.sha256'));
+            const checksumAssets = assets.filter((asset) => asset.name.endsWith('.sha256'));
 
             core.info(`Validating release ${release.tag_name}`);
             core.info(`Assets: ${assets.map((asset) => asset.name).join(', ') || '(none)'}`);
 
-            if (zipAssets.length !== 1) {
+            if (primaryAssets.length !== 1) {
               core.setFailed(
-                `Expected exactly 1 primary .zip asset, found ${zipAssets.length}: ${zipAssets
+                `Expected exactly 1 primary .dmg or .zip asset, found ${primaryAssets.length}: ${primaryAssets
                   .map((asset) => asset.name)
                   .join(', ')}`
               );
@@ -67,20 +68,20 @@ jobs:
 
             if (checksumAssets.length !== 1) {
               core.setFailed(
-                `Expected exactly 1 .zip.sha256 checksum asset, found ${checksumAssets.length}: ${checksumAssets
+                `Expected exactly 1 .sha256 checksum asset, found ${checksumAssets.length}: ${checksumAssets
                   .map((asset) => asset.name)
                   .join(', ')}`
               );
               return;
             }
 
-            const zipBaseName = zipAssets[0].name;
-            const expectedChecksumName = `${zipBaseName}.sha256`;
+            const primaryAssetName = primaryAssets[0].name;
+            const expectedChecksumName = `${primaryAssetName}.sha256`;
             if (checksumAssets[0].name !== expectedChecksumName) {
               core.setFailed(
-                `Checksum asset must match the primary zip. Expected ${expectedChecksumName}, found ${checksumAssets[0].name}.`
+                `Checksum asset must match the primary download. Expected ${expectedChecksumName}, found ${checksumAssets[0].name}.`
               );
               return;
             }
 
-            core.notice(`Release ${release.tag_name} passed: ${zipBaseName}`);
+            core.notice(`Release ${release.tag_name} passed: ${primaryAssetName}`);

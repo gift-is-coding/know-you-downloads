@@ -10,9 +10,10 @@ Public download artifacts and landing page for Know You macOS releases.
 
 Each release must contain exactly:
 
-- 1 primary `.zip` asset for the macOS app
-- 1 matching `.zip.sha256` checksum file
+- 1 primary `.dmg` asset for the macOS app, preferred
+- or 1 primary `.zip` asset as a fallback
+- 1 matching `.sha256` checksum file
 
 The repository validates this automatically in GitHub Actions on every published or edited release.
-If a release contains multiple primary zip files, or the checksum file does not match the zip
+If a release contains multiple primary download files, or the checksum file does not match the asset
 name, the validation workflow fails so the download redirect on `giiift.site` never has to guess.
