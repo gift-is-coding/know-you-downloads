@@ -1,6 +1,6 @@
 {
-  "version": "1.2.3",
-  "summary": "KnowYou 1.2.3 adds Sparkle-powered direct self-updates and a stronger update experience.\n\n- Direct-channel updates now use Sparkle for download, verification, install, quit, replace, and relaunch.\n- The update pill is more visible and shows the available version.\n- Update sheets now show release notes every time an update is offered.\n- After a successful version change, KnowYou shows a one-time What's New dialog for that installed version.\n- Release publishing now emits both legacy latest.json and Sparkle appcast.xml with signed DMG enclosure metadata.",
-  "publishedAt": "2026-06-02T00:00:00Z",
-  "downloadURL": "https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.3-build321/KnowYou-1.2.3-321.dmg"
+  "version": "1.2.4",
+  "summary": "KnowYou 1.2.4 makes the app feel cleaner and makes future updates easier.\n\n- Cleaner app window: the KnowYou title, app icon, privacy reminder, and Diary Engine control now stay aligned in the title bar.\n- Better app icon: the Dock icon is slightly larger and better centered.\n- Smoother Diary Engine startup: KnowYou now remembers when your selected Diary Engine was already working, so it should not briefly flash a warning every time you open the app.\n- Easier future updates: after installing this version, future direct-download updates can be completed inside KnowYou instead of downloading a new DMG and dragging the app again.\n- Clearer update notes: update messages now explain what changed in plain language.",
+  "publishedAt": "2026-06-03T00:00:00Z",
+  "downloadURL": "https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.4-build326/KnowYou-1.2.4-326.dmg"
 }

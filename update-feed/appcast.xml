@@ -5,18 +5,18 @@
     <link>https://github.com/gift-is-coding/know-you-downloads</link>
     <description>KnowYou direct release updates</description>
     <item>
-      <title>KnowYou v1.2.3 (321)</title>
-      <sparkle:version>321</sparkle:version>
-      <sparkle:shortVersionString>1.2.3</sparkle:shortVersionString>
-      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[KnowYou 1.2.3 adds Sparkle-powered direct self-updates and a stronger update experience.
+      <title>KnowYou v1.2.4 (326)</title>
+      <sparkle:version>326</sparkle:version>
+      <sparkle:shortVersionString>1.2.4</sparkle:shortVersionString>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[KnowYou 1.2.4 makes the app feel cleaner and makes future updates easier.
 
-- Direct-channel updates now use Sparkle for download, verification, install, quit, replace, and relaunch.
-- The update pill is more visible and shows the available version.
-- Update sheets now show release notes every time an update is offered.
-- After a successful version change, KnowYou shows a one-time What's New dialog for that installed version.
-- Release publishing now emits both legacy latest.json and Sparkle appcast.xml with signed DMG enclosure metadata.]]></description>
-      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.3-build321/KnowYou-1.2.3-321.dmg" type="application/octet-stream" sparkle:edSignature="Z/sJX8lCQFe2jTWmc9cy4RxmxqHurVFVkK5fz5uXVrw8kh0cOIGcqY01dH7yPcZL0pJAoCrtdeYYCNDsLFVxBA==" length="9913653" />
+- Cleaner app window: the KnowYou title, app icon, privacy reminder, and Diary Engine control now stay aligned in the title bar.
+- Better app icon: the Dock icon is slightly larger and better centered.
+- Smoother Diary Engine startup: KnowYou now remembers when your selected Diary Engine was already working, so it should not briefly flash a warning every time you open the app.
+- Easier future updates: after installing this version, future direct-download updates can be completed inside KnowYou instead of downloading a new DMG and dragging the app again.
+- Clearer update notes: update messages now explain what changed in plain language.]]></description>
+      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.4-build326/KnowYou-1.2.4-326.dmg" type="application/octet-stream" sparkle:edSignature="3O6z5XyxkA3HRwpmK7pOf0Mt+yWL7XeeaWjzmtebqMA3ANSiCeoONE/Pc1R9FHPdO4uBFmrTk6/0y0Kv7xz6Bg==" length="10146271" />
     </item>
   </channel>
 </rss>
