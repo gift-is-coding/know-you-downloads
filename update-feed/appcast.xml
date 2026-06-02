@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>KnowYou Updates</title>
+    <link>https://github.com/gift-is-coding/know-you-downloads</link>
+    <description>KnowYou direct release updates</description>
+    <item>
+      <title>KnowYou v1.2.3 (321)</title>
+      <sparkle:version>321</sparkle:version>
+      <sparkle:shortVersionString>1.2.3</sparkle:shortVersionString>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[KnowYou 1.2.3 adds Sparkle-powered direct self-updates and a stronger update experience.
+
+- Direct-channel updates now use Sparkle for download, verification, install, quit, replace, and relaunch.
+- The update pill is more visible and shows the available version.
+- Update sheets now show release notes every time an update is offered.
+- After a successful version change, KnowYou shows a one-time What's New dialog for that installed version.
+- Release publishing now emits both legacy latest.json and Sparkle appcast.xml with signed DMG enclosure metadata.]]></description>
+      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.3-build321/KnowYou-1.2.3-321.dmg" type="application/octet-stream" sparkle:edSignature="Z/sJX8lCQFe2jTWmc9cy4RxmxqHurVFVkK5fz5uXVrw8kh0cOIGcqY01dH7yPcZL0pJAoCrtdeYYCNDsLFVxBA==" length="9913653" />
+    </item>
+  </channel>
+</rss>

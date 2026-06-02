@@ -1,6 +1,6 @@
 {
-  "version": "1.2.1",
-  "summary": "KnowYou v1.2.1 (317) is available.",
+  "version": "1.2.3",
+  "summary": "KnowYou 1.2.3 adds Sparkle-powered direct self-updates and a stronger update experience.\n\n- Direct-channel updates now use Sparkle for download, verification, install, quit, replace, and relaunch.\n- The update pill is more visible and shows the available version.\n- Update sheets now show release notes every time an update is offered.\n- After a successful version change, KnowYou shows a one-time What's New dialog for that installed version.\n- Release publishing now emits both legacy latest.json and Sparkle appcast.xml with signed DMG enclosure metadata.",
   "publishedAt": "2026-06-02T00:00:00Z",
-  "downloadURL": "https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.1-build317/KnowYou-1.2.1-317.dmg"
+  "downloadURL": "https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.3-build321/KnowYou-1.2.3-321.dmg"
 }
