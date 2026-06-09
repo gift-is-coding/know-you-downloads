@@ -5,18 +5,23 @@
     <link>https://github.com/gift-is-coding/know-you-downloads</link>
     <description>KnowYou direct release updates</description>
     <item>
-      <title>KnowYou v1.2.4 (326)</title>
-      <sparkle:version>326</sparkle:version>
-      <sparkle:shortVersionString>1.2.4</sparkle:shortVersionString>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[KnowYou 1.2.4 makes the app feel cleaner and makes future updates easier.
+      <title>KnowYou v1.2.5 (368)</title>
+      <sparkle:version>368</sparkle:version>
+      <sparkle:shortVersionString>1.2.5</sparkle:shortVersionString>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[KnowYou 1.2.5 improves My Wiki reliability and release polish.
 
-- Cleaner app window: the KnowYou title, app icon, privacy reminder, and Diary Engine control now stay aligned in the title bar.
-- Better app icon: the Dock icon is slightly larger and better centered.
-- Smoother Diary Engine startup: KnowYou now remembers when your selected Diary Engine was already working, so it should not briefly flash a warning every time you open the app.
-- Easier future updates: after installing this version, future direct-download updates can be completed inside KnowYou instead of downloading a new DMG and dragging the app again.
-- Clearer update notes: update messages now explain what changed in plain language.]]></description>
-      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.4-build326/KnowYou-1.2.4-326.dmg" type="application/octet-stream" sparkle:edSignature="3O6z5XyxkA3HRwpmK7pOf0Mt+yWL7XeeaWjzmtebqMA3ANSiCeoONE/Pc1R9FHPdO4uBFmrTk6/0y0Kv7xz6Bg==" length="10146271" />
+What is new:
+- My Wiki Update is more reliable: the bundled runner now keeps app/runner JSON messages separate from diagnostic logs, avoiding rare stuck updates.
+- Chinese and other multibyte LLM responses are decoded safely when streamed through the runner bridge.
+- My Wiki detail pages handle long titles and related chips more cleanly.
+- The bundled MyWiki runner remains inside KnowYou, so users do not need npm.
+
+Release details:
+- Version: 1.2.5
+- Build: 368
+- Released: 2026-06-10]]></description>
+      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.5-build368/KnowYou-1.2.5-368.dmg" type="application/octet-stream"  />
     </item>
   </channel>
 </rss>

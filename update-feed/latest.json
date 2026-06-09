@@ -1,6 +1,6 @@
 {
-  "version": "1.2.4",
-  "summary": "KnowYou 1.2.4 makes the app feel cleaner and makes future updates easier.\n\n- Cleaner app window: the KnowYou title, app icon, privacy reminder, and Diary Engine control now stay aligned in the title bar.\n- Better app icon: the Dock icon is slightly larger and better centered.\n- Smoother Diary Engine startup: KnowYou now remembers when your selected Diary Engine was already working, so it should not briefly flash a warning every time you open the app.\n- Easier future updates: after installing this version, future direct-download updates can be completed inside KnowYou instead of downloading a new DMG and dragging the app again.\n- Clearer update notes: update messages now explain what changed in plain language.",
-  "publishedAt": "2026-06-03T00:00:00Z",
-  "downloadURL": "https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.4-build326/KnowYou-1.2.4-326.dmg"
+  "version": "1.2.5",
+  "summary": "KnowYou 1.2.5 improves My Wiki reliability and release polish.\n\nWhat is new:\n- My Wiki Update is more reliable: the bundled runner now keeps app/runner JSON messages separate from diagnostic logs, avoiding rare stuck updates.\n- Chinese and other multibyte LLM responses are decoded safely when streamed through the runner bridge.\n- My Wiki detail pages handle long titles and related chips more cleanly.\n- The bundled MyWiki runner remains inside KnowYou, so users do not need npm.\n\nRelease details:\n- Version: 1.2.5\n- Build: 368\n- Released: 2026-06-10",
+  "publishedAt": "2026-06-10T00:00:00Z",
+  "downloadURL": "https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.5-build368/KnowYou-1.2.5-368.dmg"
 }
