@@ -5,9 +5,9 @@
     <link>https://github.com/gift-is-coding/know-you-downloads</link>
     <description>KnowYou direct release updates</description>
     <item>
-      <title>KnowYou v1.2.5 (368)</title>
-      <sparkle:version>368</sparkle:version>
-      <sparkle:shortVersionString>1.2.5</sparkle:shortVersionString>
+      <title>KnowYou v ()</title>
+      <sparkle:version></sparkle:version>
+      <sparkle:shortVersionString></sparkle:shortVersionString>
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
       <description><![CDATA[KnowYou 1.2.5 improves My Wiki reliability and release polish.
 
@@ -21,7 +21,7 @@ Release details:
 - Version: 1.2.5
 - Build: 368
 - Released: 2026-06-10]]></description>
-      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.5-build368/KnowYou-1.2.5-368.dmg" type="application/octet-stream"  />
+      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v-build/KnowYou--.dmg" type="application/octet-stream"  />
     </item>
   </channel>
 </rss>
