@@ -5,23 +5,21 @@
     <link>https://github.com/gift-is-coding/know-you-downloads</link>
     <description>KnowYou direct release updates</description>
     <item>
-      <title>KnowYou v1.2.5 (368)</title>
-      <sparkle:version>368</sparkle:version>
-      <sparkle:shortVersionString>1.2.5</sparkle:shortVersionString>
+      <title>KnowYou v1.2.7 (377)</title>
+      <sparkle:version>377</sparkle:version>
+      <sparkle:shortVersionString>1.2.7</sparkle:shortVersionString>
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[KnowYou 1.2.5 improves My Wiki reliability and release polish.
+      <description><![CDATA[KnowYou 1.2.7 makes global search faster and more reliable.
 
 What is new:
-- My Wiki Update is more reliable: the bundled runner now keeps app/runner JSON messages separate from diagnostic logs, avoiding rare stuck updates.
-- Chinese and other multibyte LLM responses are decoded safely when streamed through the runner bridge.
-- My Wiki detail pages handle long titles and related chips more cleanly.
-- The bundled MyWiki runner remains inside KnowYou, so users do not need npm.
+- Global Search now uses a local persistent index for Diary, Sources, Todo, and My Wiki, so repeated searches no longer rescan local files.
+- Search opens from the main navigation and Command-F, keeps explicit Search/Enter submit behavior, and shows separate local indexing/searching states.
+- Search results continue to support highlighting and navigation while avoiding silent drops during first-time indexing.
 
 Release details:
-- Version: 1.2.5
-- Build: 368
+- Version: 1.2.7
 - Released: 2026-06-10]]></description>
-      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.5-build368/KnowYou-1.2.5-368.dmg" type="application/octet-stream" sparkle:edSignature="l9ZNW6gFG90HCct4f9MJ0tHPlfbopfxCCmRPFlQYDzfZfxLohtA45NvDJXAYeSFrFoc4dHA7QfEPUFTCAyUOAA==" length="48840557" />
+      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.7-build377/KnowYou-1.2.7-377.dmg" type="application/octet-stream" sparkle:edSignature="Bh8NJsr8Ttco1JtL4pYHF0ojR76GHtxawtnGIJuRkXB3hNmG9cEeb0N2y14qIUobEFK8kNhqUCp+IwsqKdjmBg==" length="49130596" />
     </item>
   </channel>
 </rss>
