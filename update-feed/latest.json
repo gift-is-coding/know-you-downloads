@@ -1,6 +1,6 @@
 {
   "version": "1.2.7",
-  "summary": "KnowYou 1.2.7 makes global search faster and more reliable.\n\nWhat is new:\n- Global Search now uses a local persistent index for Diary, Sources, Todo, and My Wiki, so repeated searches no longer rescan local files.\n- Search opens from the main navigation and Command-F, keeps explicit Search/Enter submit behavior, and shows separate local indexing/searching states.\n- Search results continue to support highlighting and navigation while avoiding silent drops during first-time indexing.\n\nRelease details:\n- Version: 1.2.7\n- Released: 2026-06-10",
-  "publishedAt": "2026-06-10T00:00:00Z",
-  "downloadURL": "https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.7-build377/KnowYou-1.2.7-377.dmg"
+  "summary": "KnowYou 1.2.7 makes diary sharing easier and safer.\n\nWhat's new:\n- Added Share Redacted for full diary entries and selected diary excerpts.\n- Share images are generated locally with a preview, download link, and QR code.\n- Redacted sharing is selected by default, with visible masking for sensitive details.\n- Copy Image now confirms when the image is ready to paste elsewhere.\n\nRelease details:\n- Version: 1.2.7\n- Build: 381\n- Released: 2026-06-15",
+  "publishedAt": "2026-06-15T00:00:00Z",
+  "downloadURL": "https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.7-build381/KnowYou-1.2.7-381.dmg"
 }

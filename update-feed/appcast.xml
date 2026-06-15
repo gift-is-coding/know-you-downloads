@@ -5,21 +5,23 @@
     <link>https://github.com/gift-is-coding/know-you-downloads</link>
     <description>KnowYou direct release updates</description>
     <item>
-      <title>KnowYou v1.2.7 (377)</title>
-      <sparkle:version>377</sparkle:version>
+      <title>KnowYou v1.2.7 (381)</title>
+      <sparkle:version>381</sparkle:version>
       <sparkle:shortVersionString>1.2.7</sparkle:shortVersionString>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[KnowYou 1.2.7 makes global search faster and more reliable.
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[KnowYou 1.2.7 makes diary sharing easier and safer.
 
-What is new:
-- Global Search now uses a local persistent index for Diary, Sources, Todo, and My Wiki, so repeated searches no longer rescan local files.
-- Search opens from the main navigation and Command-F, keeps explicit Search/Enter submit behavior, and shows separate local indexing/searching states.
-- Search results continue to support highlighting and navigation while avoiding silent drops during first-time indexing.
+What's new:
+- Added Share Redacted for full diary entries and selected diary excerpts.
+- Share images are generated locally with a preview, download link, and QR code.
+- Redacted sharing is selected by default, with visible masking for sensitive details.
+- Copy Image now confirms when the image is ready to paste elsewhere.
 
 Release details:
 - Version: 1.2.7
-- Released: 2026-06-10]]></description>
-      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.7-build377/KnowYou-1.2.7-377.dmg" type="application/octet-stream" sparkle:edSignature="Bh8NJsr8Ttco1JtL4pYHF0ojR76GHtxawtnGIJuRkXB3hNmG9cEeb0N2y14qIUobEFK8kNhqUCp+IwsqKdjmBg==" length="49130596" />
+- Build: 381
+- Released: 2026-06-15]]></description>
+      <enclosure url="https://github.com/gift-is-coding/know-you-downloads/releases/download/v1.2.7-build381/KnowYou-1.2.7-381.dmg" type="application/octet-stream" sparkle:edSignature="5nqv2Gm9YdzuiekjIUK8b/GQGETx6ivIH+47KnrGPAuvDM3nLrDGWGjYEkctr3AjbBgtoTvfr0Ojqi1xgXgYCw==" length="49196136" />
     </item>
   </channel>
 </rss>
